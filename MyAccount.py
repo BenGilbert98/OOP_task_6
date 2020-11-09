@@ -36,3 +36,6 @@ class MyAccount(AccountHolderDetails):
                 print("Sorry, this withdrawal will take you past your £1000 overdraft.    ")
         else:
             return
+
+    def Bank_fees(self):
+        return self.balance * 0.95
