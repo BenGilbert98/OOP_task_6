@@ -1,16 +1,16 @@
-# This is a sample Python script.
+from Account_holder_details import AccountHolderDetails
+from ManageAccount import ManageAccount
+from MyAccount import MyAccount
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+name = input("What is your name?    ")
+address = input("What is your address?    ")
+age = int(input("What is your age?    "))
+account_number = int(input("What is your account number?    "))
+__pin_number = int(input("What is your pin number?    "))
+
+account_holder_details = AccountHolderDetails(name, address, age)
+my_account = MyAccount(name, address, age, account_number, __pin_number)
+manage_account = ManageAccount(name, address, age, account_number, __pin_number)
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+manage_account.display()
