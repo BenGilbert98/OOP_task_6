@@ -9,14 +9,16 @@ class MyAccount(AccountHolderDetails):
     def __init__(self, name, address, age, account_number, __pin_number):
         super().__init__(name, address, age)
         self.AccountNumber = account_number
-        self.balance = 0
+        self.balance = 0 # Balance is set to 0 by default
         self.__pin_number = __pin_number
 
+    # Method to deposit money to account
     def Deposit(self):
         deposit_amount = int(input("How much money would you like to deposit?     "))
         self.balance += deposit_amount
         return print(f"Your total balance is £{self.balance}")
 
+    # Method to withdraw money to account (requires pin verification)
     def Withdrawal(self):
         test = int(input("What is your pin number?     "))
         if test == self.__pin_number:
@@ -37,5 +39,11 @@ class MyAccount(AccountHolderDetails):
         else:
             return
 
+    # Function to pay bank fees
     def Bank_fees(self):
-        return print(f"You have £{self.balance * 0.95} left in your account")
+        test = int(input("What is your pin number?     "))
+        if test == self.__pin_number:
+            self.balance = 0.95 * self.balance
+            return print(f"You have £{self.balance} left in your account")
+        else:
+            return
