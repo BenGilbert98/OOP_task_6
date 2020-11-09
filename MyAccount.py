@@ -38,4 +38,4 @@ class MyAccount(AccountHolderDetails):
             return
 
     def Bank_fees(self):
-        return self.balance * 0.95
+        return print(f"You have £{self.balance * 0.95} left in your account")

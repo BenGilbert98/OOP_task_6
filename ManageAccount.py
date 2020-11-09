@@ -10,7 +10,8 @@ class ManageAccount(MyAccount, AccountHolderDetails):
 
     def display(self):
         while True:
-            method = input(f"Hello {self.name}, what would you like to do today? \n {self.options}        ")
+            method = input(f"Hello {self.name}, what would you like to do today? \n {self.options} \n type exit to "
+                           f"leave       ")
             if method.lower() == "display":
                 print(f"Hello {self.name}, your current balance is £{self.balance}")
 
