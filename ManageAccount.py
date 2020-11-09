@@ -8,6 +8,7 @@ class ManageAccount(MyAccount, AccountHolderDetails):
         self.balance = 0
         self.options = ["Display", "Deposit", "Withdrawal", "Pay Bank Fees"]
 
+    # Function to display information and take user promt to determine what action to take
     def display(self):
         while True:
             method = input(f"Hello {self.name}, what would you like to do today? \n {self.options} \n type exit to "
